@@ -1,0 +1,172 @@
+/* Global */
+:root{
+  --accent-1: #0984e3;
+  --accent-2: #6c5ce7;
+  --card-bg: #ffffff;
+  --muted: #636e72;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  color: #2d3436;
+  background: linear-gradient(135deg,#74b9ff 0%, #a29bfe 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & nav */
+header {
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: rgba(255,255,255,0.12);
+  padding: 8px 0;
+  text-align: center;
+}
+nav ul { margin:0; padding:0; list-style:none; }
+nav ul li { display:inline-block; margin:0 10px; }
+nav a { color: #fff; text-decoration:none; font-weight:600; opacity:0.95; }
+
+/* Main container (centra todo horizontalmente) */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 0 16px 40px;
+}
+
+/* Tabla de beneficios (centrada) */
+.beneficios {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  border-collapse: collapse;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg,#fff7cc,#ffeaa7);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.beneficios th {
+  background:#fd79a8;
+  color:#fff;
+  padding:12px;
+  text-align:left;
+}
+.beneficios td {
+  padding:12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Formulario: centrado y alineado */
+.formulario {
+  width: 100%;
+  max-width: 480px;
+  margin: 24px auto;
+  padding: 22px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.12);
+}
+
+/* Cada fila usa grid para alinear label + input */
+.form-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Etiqueta en la primera columna (alineada a la derecha) */
+.form-row label[for],
+.form-row .label {
+  text-align: right;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+/* Inputs y select ocupan toda la segunda columna */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select,
+.formulario input[type="tel"],
+.formulario input[type="date"] {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1px solid #dfe6e9;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Radio options */
+.options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.option-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #f1f2f6;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+}
+.option-item input[type="radio"] {
+  margin: 0;
+  transform: scale(1.05);
+}
+
+/* Checkbox label (segunda columna) */
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+  transform: scale(1.05);
+}
+
+/* Botón */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg,#00b894,#55efc4);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover { opacity: 0.95; transform: translateY(-1px); }
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: #2d3436;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Responsive: en pantallas pequeñas, etiqueta encima del input */
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-row label[for], .form-row .label { text-align: left; margin-bottom: 6px; }
+  .formulario { padding: 16px; }
+}

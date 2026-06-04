@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #e95af9, #cc00ff);
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  padding: 48px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 6px 0 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #53036c;
+  box-shadow: 0 0 0 3px rgba(106, 90, 249, 0.15);
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #e100ff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #e84cf0;
+}
+
+.mensaje {
+  margin-top: 14px;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  display: none; /* se muestra solo cuando haya texto */
+}
+
+/* Cuando JS agrega clases */
+.mensaje.error {
+  display: block;
+  background: #ffe6e6;
+  color: #b30000;
+  border: 1px solid #ffb3b3;
+}
+
+.mensaje.ok {
+  display: block;
+  background: #e9fff0;
+  color: #0a7a2f;
+  border: 1px solid #bdf0cd;
+}

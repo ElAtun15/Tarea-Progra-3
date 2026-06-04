@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Elementos Semánticos HTML5</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+    header, nav, section, article, aside, footer { 
+      border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;
+    }
+    nav a { margin-right: 10px; text-decoration: none; color: blue; }
+    h1, h2, h3 { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER: Encabezado principal -->
+  <header>
+    <h1>Mi Página Web</h1>
+    <p>Bienvenido a este ejemplo de HTML5 semántico.</p>
+  </header>
+
+  <!-- NAV: Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#blog">Blog</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- MAIN: Contenido principal -->
+  <main>
+    <!-- SECTION: Sección temática -->
+    <section id="blog">
+      <h2>Sección de Blog</h2>
+
+      <!-- ARTICLE: Contenido independiente -->
+      <article>
+        <h3>Artículo 1</h3>
+        <p>Este es un artículo dentro de la sección de blog.</p>
+      </article>
+
+      <article>
+        <h3>Artículo 2</h3>
+        <p>Otro artículo independiente dentro de la misma sección.</p>
+      </article>
+    </section>
+
+    <section id="noticias">
+      <h2>Sección de noticias</h2>
+
+      <!-- ARTICLE: Contenido independiente -->
+      <article>
+        <h3>Noticia 1</h3>
+        <p>Este es un artículo dentro de la sección de noticias.</p>
+      </article>
+
+      <article>
+        <h3>Noticia 2</h3>
+        <p>Otro artículo independiente dentro de la misma sección.</p>
+      </article>
+    </section>
+
+    <!-- ASIDE: Contenido lateral o complementario -->
+    <aside>
+      <h3>Enlaces Útiles</h3>
+      <ul>
+        <li><a href="#">Aprender HTML</a></li>
+        <li><a href="#">Aprender CSS</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- FOOTER: Pie de página -->
+  <footer>
+    <p>&copy; 2025 Mi Página Web</p>
+    <p>Contacto: ejemplo@correo.com</p>
+  </footer>
+
+</body>
+</html>

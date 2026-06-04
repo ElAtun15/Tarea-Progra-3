@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registro de Cliente - Ejemplo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Cliente</h1>
+    <p>Por favor completa la siguiente información:</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#formulario">Ir al formulario</a></li>
+      <li><a href="https://www.google.com" target="_blank" rel="noopener">Google</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="tabla">
+      <h2>Beneficios de registrarse</h2>
+      <table class="beneficios">
+        <thead>
+          <tr>
+            <th>Beneficio</th><th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Promociones</td><td>Acceso a descuentos exclusivos</td></tr>
+          <tr><td>Soporte</td><td>Atención personalizada</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="formulario">
+      <form id="clienteForm" class="formulario" novalidate>
+        <!-- Nombre -->
+        <div class="form-row">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+
+        <!-- Género (radio) -->
+        <div class="form-row">
+          <div class="label">Género:</div>
+          <div class="options" role="radiogroup" aria-labelledby="generoLabel">
+            <label class="option-item">
+              <input type="radio" name="genero" value="Masculino" /> 
+              <span>Masculino</span>
+            </label>
+            <label class="option-item">
+              <input type="radio" name="genero" value="Femenino" /> 
+              <span>Femenino</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- País -->
+        <div class="form-row">
+          <label for="pais">País:</label>
+          <select id="pais" name="pais" required>
+            <option value="">Seleccione</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="México">México</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Alemania">Alem.</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <!-- Términos (checkbox) -->
+        <div class="form-row">
+          <div class="label"></div>
+          <label class="checkbox-label">
+            <input type="checkbox" id="terminos" name="terminos" />
+            <span>Acepto los términos y condiciones</span>
+          </label>
+        </div>
+
+        <!-- Botón -->
+        <div class="form-row">
+          <div class="label"></div>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Ejemplo de Tecnologías Web</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

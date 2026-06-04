@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="estilosLogin.css" />
+</head>
+<body>
+
+  <div class="container">
+    <form class="card" id="loginForm" novalidate>
+      <h1>Iniciar sesión</h1>
+      <p class="subtitle">Bienvenido/a 👋</p>
+
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" placeholder="Escribe tu usuario" />
+
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" placeholder="Escribe tu contraseña" />
+
+      <button type="submit">Entrar</button>
+
+      <p id="mensaje" class="mensaje"></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const usuario = document.getElementById("usuario");
+    const contrasena = document.getElementById("contrasena");
+    const mensaje = document.getElementById("mensaje");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const u = usuario.value.trim();
+      const c = contrasena.value.trim();
+
+      if (u === "" || c === "") {
+        mensaje.textContent = "Debe completar todos los campos.";
+        mensaje.classList.remove("ok");
+        mensaje.classList.add("error");
+      } else {
+        mensaje.textContent = "La validación fue correcta ✅";
+        mensaje.classList.remove("error");
+        mensaje.classList.add("ok");
+      }
+    });
+  </script>
+
+</body>
+</html>
